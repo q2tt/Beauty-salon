@@ -1,0 +1,115 @@
+.contacts{
+    padding: 112px 0;
+
+    @include _xl{
+        padding: 90px 0;
+    }
+
+    @include _l{
+        padding: 80px 0;
+    }
+
+    @include _m{
+        padding: 50px 0;
+    }
+
+    @include _s{
+        padding: 50px 0;
+    }
+
+    &__h1{
+        @include title;
+        margin-bottom: 80px;
+
+        @include _m{
+            margin-bottom: 44px;
+        }
+
+        @include _s{
+            margin-bottom: 40px;
+        }
+    }
+
+    &__wrapper{
+        @include flex-row;
+        margin-bottom: 96px;
+
+        @include _xl{
+            margin-bottom: 76px;
+        }
+
+        @include _l{
+            margin-bottom: 56px;
+        }
+
+        @include _m{
+            flex-direction: column;
+            margin-bottom: 56px;
+        }
+
+        @include _s{
+            flex-direction: column;
+            margin-bottom: 46px;
+        }
+    }
+
+    &__box{
+        width: 270px;
+        margin-right: 34px;
+
+        @include _xl{
+            margin-right: 25px;
+        }
+
+        @include _l{
+            margin-right: 0;
+        }
+
+        @include _m{
+            margin-bottom: 34px;
+        }
+
+        @include _s{
+            margin-bottom: 14px;
+        }
+    }
+
+    &__title{
+        @include text22;
+        font-weight: bold;
+        margin-bottom: 34px;
+
+        @include _m{
+            margin-bottom: 14px;
+        }
+
+        @include _s{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__txt{
+        @include text;
+    }
+
+    &__txt-link{
+        @include text;
+        text-decoration: none;
+        color: $light-black;
+    }
+
+    &__map{
+        width: 100%;
+        height: 608px;
+
+
+        @include _m{
+            height: 400px;
+        }
+
+        @include _s{
+            height: 340px;
+        }
+    }
+}

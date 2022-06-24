@@ -1,0 +1,202 @@
+.servises{
+    padding: 112px 0;
+
+    @include _xl{
+        padding: 92px 0;
+    }
+
+    @include _l{
+        padding: 80px 0;
+    }
+
+    @include _m{
+        padding: 40px 0;
+    }
+
+    @include _s{
+        padding: 30px 0;
+    }
+
+    &__h1{
+        @include title;
+
+        @include _m{
+           margin-bottom: 40px;
+        }
+
+        @include _s{
+            margin-bottom: 30px;
+         }
+    }
+
+    &__btns{
+        @include flex-row;
+        margin-bottom: 48px;
+
+        @include _m{
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        @include _s{
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__btn{
+        padding: 16px 24px;
+        border: 1px solid $gray2;
+        border-radius: 4px;
+        margin-right: 24px;
+        @include footter-txt;
+
+        @include _l{
+            padding: 14px 20px;
+            font-size: 14px;
+        }
+
+        @include _m{
+            padding: 10px 16px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        @include _s{
+            padding: 14px 10px;
+            font-size: 14px;
+            margin: 0  24px  14px 0;
+        }
+    }
+
+    &__btn:hover{
+        cursor: pointer;
+       box-shadow:  4px 2px 11px 3px #dededeb8;
+    }
+   
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__box{
+        width: 771px;
+        height: auto;
+        border-radius: 16px;
+        background-color: $grey;
+        margin: 0 17px 25px 0;
+
+        @include _3xl {
+            width: 680px;
+        }
+
+        @include _xxl{
+            width: 565px;
+        }
+
+        @include _xl{
+            width: 470px;
+        }
+
+        @include _l{
+            width: 360px;
+        }
+
+        @include _m{
+            width: 470px;
+            margin-bottom: 40px;
+        }
+
+        @include _s{
+            width: 320px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+        }
+
+    }
+
+    &__img-box{
+        width: 100%;
+        height: auto;
+    }
+
+    &__img{
+        width: 771px;
+        border-radius: 16px 16px 0px 0px;
+
+        @include _3xl {
+            width: 680px;
+        }
+
+        @include _xxl{
+            width: 565px;
+        }
+
+        @include _xl{
+            width: 470px;
+        }
+
+        @include _l{
+            width: 360px;
+        }
+
+        @include _m{
+            width: 470px;
+        }
+
+        @include _s{
+            width: 320px;
+        }
+    }
+
+    &__title{
+        padding: 0 48px;
+        margin: 48px 0 24px 0;
+        @include text32;
+
+        @include _l{
+            margin: 38px 0 24px 0;
+            font-size: 26px;
+        }
+
+        @include _s{
+            padding: 0 24px;
+            margin: 24px 0;
+            font-size: 18px;
+        }
+    }
+
+    &__txt{
+        padding: 0 48px;
+        margin-bottom: 16px;
+        @include text;
+
+        @include _l{
+            margin-bottom: 14px;
+            font-size: 18px;
+        }
+
+        @include _s{
+            padding: 0 24px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+
+    &__txt-span{
+        font-size: 16px;
+        margin-left: 10px;
+        text-decoration: line-through;
+
+        @include _l{
+            font-size: 14px;
+        }
+
+        @include _s{
+            font-size: 10px;
+        }
+    }
+
+}

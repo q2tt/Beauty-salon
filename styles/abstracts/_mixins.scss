@@ -1,0 +1,88 @@
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @mixin flex-row-btw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @mixin text {
+    font-size: 20px;
+    line-height: 150%;
+    color: #363431;
+  }
+
+  @mixin text32 {
+    font-size: 32px;
+    line-height: 120%;
+    color: $light-black;
+  }
+
+  @mixin text28 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+
+  @mixin text22 {
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  @mixin title {
+    font-size: 48px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  @mixin footter-txt {
+    font-size: 16px;
+    line-height: 16px;
+    color: $light-black;
+  }
+
+@mixin _3xl {
+    @media (min-width: 1441px) and (max-width: 1600px){
+      @content;
+    }
+}
+
+  @mixin _xxl {
+    @media (min-width: 1200px) and (max-width: 1440px){
+      @content;
+    }
+    
+  }
+  @mixin _xl {
+    @media (min-width: 992px) and (max-width: 1199px){
+      @content;
+    }
+    
+  }
+  @mixin _l {
+    @media (min-width: 768px) and (max-width: 991px){
+      @content;
+    }
+  }
+  @mixin _m {
+    @media (min-width: 480px) and (max-width: 767px){
+      @content;
+    }
+  }
+  @mixin _s {
+    @media (min-width: 320px) and (max-width: 479px){
+      @content;
+    }
+  }
+  

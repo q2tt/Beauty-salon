@@ -1,0 +1,386 @@
+.slider{
+    background-color: #F3F3F3;
+    width: 100%;
+    padding: 100px 0 ;
+
+    @include _m{
+        padding: 60px 0 80px 0 ;  
+    }
+
+    @include _s{
+        padding: 50px 0 70px 0 ;  
+    }
+
+    &__title{
+        @include title;
+
+        @include _m{
+            margin-bottom: 40px;
+         }
+
+        @include _s{
+           margin-bottom: 30px;
+        }
+    }
+    
+    &__frame-content{
+        @include flex-row;
+
+       @include _l{
+           flex-direction: column;
+           width: 648px;
+       }
+
+       @include _m{
+        flex-direction: column;
+        width: 400px;
+        }
+
+        @include _s{
+            flex-direction: column;
+            width: 250px;
+
+        }
+    }
+
+    &__img-box{
+        @include _l{
+            width: 648px;
+        }
+
+        @include _m{
+            width: 400px;
+        }
+
+        @include _s{
+            width: 250px;
+        }
+    }
+    &__img{
+        width: 648px;
+        height: 424px;
+
+        @include _xl{
+            width: 470px;
+            height: 314px;
+        }
+
+        @include _l{
+            width: 700px;
+        }
+
+        @include _m{
+            width: 450px;
+            height: auto;
+        }
+
+        @include _s{
+            width: 300px;
+            height: auto;
+        }
+    }
+
+    &__content{
+        box-sizing: border-box;
+        margin-left: 32px;
+        padding: 80px 136px 80px 0;
+        width: 692px;
+
+        @include _xl{
+            padding: 40px 0;
+        }
+
+        @include _l{
+            padding: 40px 0;
+        }
+
+        @include _m{
+            padding: 40px 0;
+        }
+
+        @include _s{
+            padding: 30px 0;
+        }
+    }
+
+    &__title-item{
+        margin-bottom: 24px;
+        @include text32;
+
+        @include _xl{
+            margin-bottom: 20px;
+        }
+
+        @include _l{
+            margin-bottom: 20px;
+        }
+
+        @include _m{
+            margin-bottom: 20px;
+        }
+
+        @include _s{
+            margin-bottom: 20px;
+            font-size: 26px;
+            width: 250px;
+        }
+    }
+
+    &__tst{
+        width: 412px;
+        font-size: 18px;
+        line-height: 170%;
+        color: #363431;
+        margin-bottom: 24px;
+
+        @include _xl{
+            width: 380px;
+            margin-bottom: 20px;
+        }
+
+        @include _m{
+            width: 360px;
+        }
+
+        @include _s{
+            width: 250px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__prise{
+        font-size: 32px;
+        line-height: 170%;
+        color: #74B900;
+
+        @include _s{
+            font-size: 26px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__prise-old{
+        font-size: 22px;
+        line-height: 170%;
+        margin-left: 10px;
+        text-decoration: line-through;
+
+        @include _s{
+            font-size: 16px;
+            line-height: 140%;
+        }
+    }
+
+    &__link{
+        font-size: 18px;
+        color: #74B900;
+        display: block;
+        padding: 5px 0;
+        width: 94px;
+        cursor: pointer;
+    }
+
+    &__frame {
+        margin: 0 auto;
+        width: 1328px;
+
+        @include _xl{
+            width: 900px;
+        }
+
+        @include _l{
+            width: 648px;
+        }
+
+        @include _m{
+            width: 400px;
+        }
+
+        @include _s{
+            width: 250px;
+        }
+    }
+
+
+    &__slides {
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+     &__inner {
+        transition: margin-left 800ms 
+            cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        width: 400%;
+        height: 424px;
+        background-color: #FFFFFF;
+
+        @include _xl{
+            height: 314px;
+        }
+
+        @include _l{
+            height: 748px;
+        }
+
+        @include _m{
+            height: 598px;
+        }
+
+        @include _s{
+            height: 500px;
+        }
+    }
+
+    &__overflow {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__inp{
+        display: none;
+    }
+
+    &__frame {
+        width: 25%;
+        float: left;
+        display: flex;
+        height: 100%;
+    }
+
+    &__bullets {
+        margin: 170px 0 0;
+        text-align: center;
+    }
+
+    &__controls {
+        margin: -180px 0 0 0;
+        width: 100%;
+        height: 50px;
+        position: relative;
+    }
+
+    &__controls label {
+        transition: opacity 0.2s ease-out;
+       display: none;
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    &__bullets label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: rgb(196, 187, 187);
+        margin: 0 10px;
+        cursor: pointer;
+
+        @include _s{
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+#input[type=radio] {
+    display: none;
+    }
+#frame input[type=radio] {
+    display: none;
+}
+  
+
+#frame label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+  
+#frame1:checked~#slides .slider__inner {
+    margin-left: 0;
+}
+  
+#frame2:checked~#slides .slider__inner {
+    margin-left: -100%;
+}
+  
+#frame3:checked~#slides .slider__inner {
+    margin-left: -200%;
+}
+#frame4:checked~#slides .slider__inner {
+    margin-left: -300%;
+}
+
+  
+#frame1:checked~#controls label:nth-child(2),
+#frame2:checked~#controls label:nth-child(3),
+#frame3:checked~#controls label:nth-child(4),
+#frame4:checked~#controls label:nth-child(1){
+    float: right;
+    margin: 200px 200px 0 0;
+    display: block;
+    background: url("../img/a.svg") no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    @include _l{
+        margin: 200px 100px 0 0;
+    }
+
+    @include _m{
+        margin: 200px 20px 0 0;
+    }
+
+    @include _s{
+        margin: 200px 20px 0 0;
+        width: 50px;
+        height: 50px;
+    }
+    
+}
+  
+#frame1:checked~#controls label:nth-last-child(1),
+#frame2:checked~#controls label:nth-last-child(4),
+#frame3:checked~#controls label:nth-last-child(3),
+#frame4:checked~#controls label:nth-last-child(2) {
+    float: left;
+    margin: 200px 0 0 200px;
+    display: block;
+    background: url("../img/a2.svg") no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    @include _l{
+        margin: 200px 0 0 100px ;
+    }
+
+    @include _m{
+        margin: 200px 0 0 20px;
+    }
+
+    @include _s{
+        margin: 200px 0 0 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+#frame1:checked~#bullets label:nth-child(1),
+#frame2:checked~#bullets label:nth-child(2),
+#frame3:checked~#bullets label:nth-child(3),
+#frame4:checked~#bullets label:nth-child(4) {
+    background: rgb(131, 126, 126);
+    cursor: pointer;
+}

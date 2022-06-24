@@ -1,0 +1,202 @@
+.promotion{
+    padding: 112px 0 0 0;
+
+    @include _m{
+        padding: 60px 0 0 0;
+    }
+
+    @include _s{
+        padding: 60px 0 0 0;
+    }
+
+    &__title{
+        @include text32;
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include _m{
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        @include _s{
+            margin-bottom: 30px;
+            text-align: left;
+        }
+    }
+
+    &__box{
+        margin-bottom: 140px;
+
+        @include _m{
+            margin-bottom: 60px;
+        }
+
+        @include _s{
+            margin-bottom: 60px;
+        }
+    }
+
+    &__txt-box{
+        width: 100%;
+        @include flex-row-btw;
+
+        @include _m{
+            @include flex-column;
+        }
+
+        @include _s{
+            @include flex-column;
+        }
+    }
+
+    &__txt-box_1, &__txt-box_2{
+        width: 628px;
+        @include text22;
+        margin-bottom: 50px;
+        text-align: justify;
+
+        @include _xxl{
+            width: 528px;
+        }
+
+        @include _xl{
+            width: 408px;
+        }
+
+        @include _l{
+            width: 328px;
+        }
+
+        @include _m{
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        @include _s{
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__txt_pink{
+        color: rgba(255, 94, 126, 1);
+    }
+
+    &__txt_green{
+        color: rgba(116, 185, 0, 1);
+    }
+
+    &__prise-box{
+        @include flex-row;
+        align-items: center;
+
+        @include _m{
+            @include flex-column;
+        }
+
+        @include _s{
+            @include flex-column;
+        }
+    }
+
+    &__img{
+        height: auto;
+        border-radius: 16px;
+
+        @include _xxl{
+            width: 558px;
+        }
+
+        @include _xl{
+            width: 448px;
+        }
+
+        @include _l{
+            width: 328px;
+        }
+
+        @include _m{
+            width: 100%;
+        }
+
+        @include _s{
+            width: 100%;
+        }
+    }
+
+    &__prise{
+        background: #F58CA1;
+        border-radius: 16px;
+        width: 456px;
+        height: 142px;
+        @include flex-row;
+        align-items: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+        margin-left: 100px;
+
+        @include _xxl{
+            width: 436px;
+        }
+
+        @include _xl{
+            padding: 0 30px;
+            margin-left: 40px;
+        }
+
+        @include _l{
+            margin-left: 40px;
+            padding: 30px 0;
+            width: 328px;
+            @include flex-column;
+            height: 140px;
+        }
+
+        @include _m{
+            margin: 40px 0 0 0;
+            width: 100%;
+            height: 100px;
+        }
+
+        @include _s{
+            margin: 40px 0 0 0;
+            padding: 20px;
+            width: 100%;
+            height: 100px;
+            @include flex-column;
+        }
+    }
+
+    &__prise-title{
+        display: block;
+        @include text32;
+        color: $white;
+        width: 200px;
+
+        @include _l{
+            width: auto;
+           font-size: 24px;
+           margin-bottom: 10px;
+        }
+
+        @include _s{
+            font-size: 22px;
+            text-align: center;
+        }
+    
+    }
+
+    &__prise-num{
+        @include text32;
+        font-size: 34px;
+        color: $white;
+        
+        @include _s{
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+.body {
+    margin: 126px 0 126px 0;
+
+    @include _xl {
+        margin-top: 100px;
+    }
+
+    @include _l {
+        margin-top: 80px;
+    }
+
+    @include _m {
+        margin: 40px 0 70px 0;
+    }
+
+    @include _s {
+        margin: 30px 0 30px 0;
+    }
+
+    &__title {
+        width: 527px;
+        margin: 0 auto;
+        line-height: 58px;
+
+        @include _m {
+            width: 420px;
+        }
+
+        @include _s {
+            width: 288px;
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+
+    &__wrapper {
+        @include flex-row-btw;
+        width: 100%;
+        margin-top: 80px;
+        color: $white;
+
+        @include _l {
+            flex-direction: column-reverse;
+        }
+
+        @include _m {
+            flex-direction: column-reverse;
+            margin-top: 46px;
+        }
+
+        @include _s {
+            flex-direction: column;
+            margin-top: 40px;
+        }
+    }
+
+    &__container_left {
+        width: 649px;
+        height: 608px;
+
+        @include _xxl {
+            width: 549px;
+        }
+
+        @include _xl {
+            width: 430px;
+        }
+
+        @include _l {
+            width: 720px;
+            height: 300px;
+        }
+
+        @include _m {
+            width: 470px;
+            height: 270px;
+        }
+
+        @include _s {
+            width: 288px;
+            height: 272px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__container_box1 {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/Rectangle5.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 16px;
+    }
+
+    &__container_right {
+        width: 648px;
+        @include flex-row;
+        flex-wrap: wrap;
+
+        @include _xxl {
+            width: 549px;
+        }
+
+        @include _xl {
+            width: 450px;
+        }
+
+        @include _l {
+            width: 720px;
+        }
+
+        @include _m {
+            width: 470px;
+        }
+
+        @include _s {
+            width: 288px;
+            margin: 0 auto;
+        }
+    }
+
+    &__container_box2 {
+        width: 648px;
+        height: 288px;
+        background-image: url(../img/Rectangle8.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 16px;
+
+        @include _xxl {
+            width: 549px;
+        }
+
+        @include _xl {
+            width: 450px;
+        }
+
+        @include _l {
+            width: 720px;
+        }
+
+        @include _m {
+            width: 470px;
+        }
+
+        @include _s {
+            width: 288px;
+            height: 144px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__container_box {
+        width: 308px;
+        height: 288px;
+        border-radius: 16px;
+        margin-top: 34px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 30px;
+
+        @include _xxl {
+            width: 258px;
+        }
+
+        @include _xl {
+            width: 220px;
+            padding: 0 10px;
+        }
+
+        @include _l {
+            width: 343px;
+            margin-bottom: 34px;
+            height: 240px;
+        }
+
+        @include _m {
+            width: 218px;
+            height: 230px;
+            margin: 24px 0;
+        }
+
+        @include _s {
+            width: 288px;
+            height: 144px;
+            margin: 0 0 24px 0;
+        }
+    }
+
+    &__container_box3 {
+        background: #C6C6C6;
+        margin-right: 32px;
+
+        @include _xl {
+            margin-right: 10px;
+        }
+
+        @include _s {
+            margin: 0 0 24px 0;
+        }
+    }
+
+    &__container_box4 {
+        background: #C7DF9E;
+    }
+
+    &__text_box1 {
+        @include text28;
+        width: 350px;
+        padding: 48px 0 0 48px;
+
+        @include _s {
+            width: 178px;
+            font-size: 16px;
+            padding: 24px 0 0 24px;
+        }
+    }
+
+    &__text_box2 {
+        @include text28;
+        width: 240px;
+        padding: 168px 0 0 48px;
+
+        @include _s {
+            width: 178px;
+            font-size: 16px;
+            padding: 72px 0 0 24px;
+        }
+    }
+
+    &__text_box3,
+    &__text_box4 {
+        @include text22;
+        text-align: center;
+
+        @include _xl {
+            font-size: 19px;
+        }
+
+        @include _m {
+            font-size: 18px;
+        }
+
+        @include _s {
+            font-size: 16px;
+        }
+    }
+}

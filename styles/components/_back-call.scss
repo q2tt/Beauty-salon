@@ -1,0 +1,160 @@
+.call{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #636461b3;
+    width: 100%;
+    min-height: 100%;
+
+    &__box{
+        position: absolute;
+        top: 200px;
+        left: calc(50% - 261px);
+        width: 512px;
+        height: 528px;
+        background: #ffffff;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+    
+    &__box_2{
+        box-sizing: border-box;
+        padding: 70px 20px;
+        text-align: center
+    }
+
+    &__thanks{
+        @include text;
+        margin: 40px 0;
+    }
+
+    &__btn_ok{
+        display: block;
+        background: #ffffff;
+        height: 56px;
+        width: 80px;
+        border: 1px solid #74B900;
+        border-radius: 8px;
+        margin: 0 auto;
+        color: #74B900;
+    }
+    
+    &__wrapper{
+        @include flex-column;
+        padding: 56px;
+    }
+
+    &__title{
+        @include text32;
+        margin-top: 72px;
+        text-align: center
+    }
+
+    &__inp{
+        display: block;
+        box-sizing: border-box;
+        width: 400px;
+        height: 56px;
+        margin-bottom: 24px;
+        border: 0.5px solid #B2B2B2;
+        border-radius: 4px;
+        padding: 0 16px;
+    }
+
+    &__notice{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        margin-bottom: 40px;
+    }
+
+    &__submit{
+        display: block;
+        background: #ffffff;
+        height: 56px;
+        width: 250px;
+        border: 1px solid #74B900;
+        border-radius: 8px;
+        margin: 0 auto;
+        color: #74B900;
+    }
+
+    &__btn-exit{
+        position: absolute;
+        top: -40px;
+        right: calc(50% - 241px);
+        cursor: pointer;
+    }
+
+    @include _m{
+        &__box{
+            width: 430px;
+            left: calc(50% - 215px);
+            top: calc(50% - 215px);
+            height: 450px;
+        }
+
+        &__title{
+            margin-top: 48px;
+        }
+
+        &__wrapper{
+            padding: 30px;
+        }
+
+        &__inp{
+            width: 370px;
+        }
+
+        &__btn-exit{
+            top: -40px;
+            right: calc(50% - 201px);
+        }
+    }
+
+    @include _s{
+        &__box{
+            width: 300px;
+            left: calc(50% - 150px);
+            top: calc(50% - 160px);
+            height: 380px;
+        }
+
+        &__title{
+            margin-top: 28px;
+            font-size: 26px;
+        }
+
+        &__wrapper{
+            padding: 30px;
+        }
+
+        &__inp{
+            width: 240px;
+            height: 46px;
+        }
+
+        &__submit{
+            height: 46px;
+            width: 200px;
+        }
+
+        &__notice{
+            margin-bottom: 20px;
+        }
+
+        &__btn-exit{
+            top: -30px;
+            right: calc(50% - 140px);
+        }
+    }
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.border{
+    border: 1px solid red;
+}

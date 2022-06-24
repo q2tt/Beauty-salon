@@ -1,0 +1,236 @@
+.nav {
+    padding: 32px 0;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+
+    &__wrapper {
+        @include flex-row-btw;
+        align-items: center;
+    }
+
+    &__menu {
+        @include flex-row;
+    }
+
+    &__menu>.nav__item {
+        overflow: hidden;
+        margin: 0 30px;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include footter-txt;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 45px;
+        max-width: 200px; 
+        text-decoration: none;
+        width: 100%; 
+        letter-spacing: 0;
+    }
+
+    body.mouse &__link:hover{
+        color: $gray2;
+    }
+    
+    &__link:after{
+      backface-visibility: hidden;
+      border: 1px solid rgba(#C7DF9E, 0);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 280ms ease-in-out;
+      width: 0;
+    }
+    
+    &__link:hover:after{
+      backface-visibility: hidden;
+      border-color: #C7DF9E;;
+      transition: width 350ms ease-in-out;
+      width: 100%;
+    }
+    
+
+
+    &__tel{
+        text-decoration: none;
+        @include footter-txt;
+        font-size: 20px;
+    }
+
+    &__tel_img{
+        margin-right: 11px;
+    }
+    
+
+    &__button-container {
+        display: none;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    &__button,
+    &__button::before,
+    &__button::after {
+        display: block;
+        background-color: $gray2;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+
+    &__button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    &__button::after {
+        content: '';
+        margin-top: 8px;
+    }
+
+    #menu-toggle:checked+.nav__button-container .nav__button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+
+    #menu-toggle:checked+.nav__button-container .nav__button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked+.nav__button-container .nav__button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+    }
+
+    @include _l{
+
+        &__tel-num{
+            display: none;
+        }
+    }
+
+    @include _m{
+        padding: 6px 0 26px 0;
+
+        &__logo-img{
+            margin-top: 18px;
+            width: 130px;
+        }
+
+        &__tel-num{
+            display: none;
+        }
+    
+        &__tel_img{
+            position: absolute;
+            right: 120px;
+        }
+
+        &__button-container {
+            display: flex;
+            position: absolute;
+            top: 55px;
+            right: 50px;
+        }
+    
+        &__menu {
+            z-index: 1;
+            position: absolute;
+            top: 48px;
+            margin-top: 60px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+           background: #FFFFFF;
+           box-shadow:  8px 8px 30px -20px #ccc;
+        }
+    
+        #menu-toggle~.nav__menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+         }
+    
+        #menu-toggle:checked~.nav__menu li {
+           height: 60px;
+           border-top: 1px solid $gray2;
+           }
+    
+        &__menu>li {
+            margin: 0;
+            padding: 0 0 0 70px; 
+            
+        }
+    }
+
+    @include _s{
+        padding: 26px 0 ;
+
+        &__logo-img{
+            width: 130px;
+        }
+
+        &__tel-num{
+            display: none;
+        }
+    
+        &__tel_img{
+            position: absolute;
+            right: 85px;
+            top: 45px;
+        }
+
+        &__button-container {
+            display: flex;
+            position: absolute;
+            top: 55px;
+            right: 35px;
+        }
+    
+        &__menu {
+            z-index: 1;
+            position: absolute;
+            top: 50px;
+            margin-top: 60px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+           background: #FFFFFF;
+           box-shadow:  8px 8px 30px -20px #ccc;
+        }
+    
+        #menu-toggle~.nav__menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+         }
+    
+        #menu-toggle:checked~.nav__menu li {
+           height: 60px;
+           border-top: 1px solid $gray2;
+           }
+    
+        &__menu>li {
+            margin: 0;
+            padding: 0 0 0 70px; 
+        }
+    }
+}

@@ -1,0 +1,185 @@
+.footer{
+    padding: 80px 0;
+
+    @include _m{
+        padding: 60px 0;
+    }
+
+    @include _s{
+        padding: 40px 0;
+    }
+
+    &__container{
+        display: grid;
+        grid-template-columns: 5fr 4fr 4fr;
+        grid-template-rows: 1fr 100px ;
+        grid-template-areas: "l i f"
+                            "l i f"
+                            "m i c";
+
+        @include _xxl{
+            grid-template-columns: 3fr 5fr 5fr;
+            grid-template-rows: 1fr 80px ;
+            grid-template-areas: "l i f"
+                                "m m c";
+        }
+
+        @include _xl{
+            grid-template-columns: 3fr 5fr 5fr;
+            grid-template-rows: 4fr 80px ;
+            grid-template-areas: "l i f"
+                                "m m c";    
+        }
+
+        @include _l{
+            grid-template-columns: 3fr 3fr 3fr;
+            grid-template-rows: 180px 230px 1fr ;
+            grid-template-areas: "l f f"
+                                "i i i"
+                                "m m c";    
+        }
+        @include _m{
+            grid-template-columns: 1fr;
+            grid-template-rows: 140px 230px 220px 40px 80px ;
+            grid-template-areas: "l"
+            "i"
+            "f"
+            "c"
+            "m";  
+        }
+
+        @include _s{
+            grid-template-columns: 1fr;
+            grid-template-rows: 140px 290px 270px 40px 80px ;
+            grid-template-areas: "l"
+            "i"
+            "f"
+            "c"
+            "m";  
+        }
+
+       
+    }
+
+    &__links{
+        grid-area: l;
+        @include flex-column;
+    }
+
+    &__info{
+        grid-area: i;
+    }
+
+    &__form{
+        grid-area: f;
+    }
+
+    &__media{
+        grid-area: m;
+    }
+
+    &__conf{
+        grid-area: c;
+        display: flex;
+        align-items: flex-end;
+
+        @include _m{
+            align-items: flex-start;
+        }
+
+        @include _s{
+            align-items: flex-start;
+        }
+    }
+
+    &__link{
+        @include footter-txt;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        
+    }
+
+    &__title{
+        @include footter-txt;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &__txt{
+        width: 370px;
+        @include footter-txt;
+        line-height: 30px;
+
+        @include _xl{
+            width: 340px;                  
+        }
+
+        @include _m{
+            width: 460px;
+        }
+
+        @include _s{
+            width: 320px;
+        }
+    }
+
+    &__form_title{
+        display: block;
+        @include footter-txt;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &__form_input{
+        box-sizing: border-box;
+        width: 272px;
+        height: 48px;
+        border: none;
+        background-color:  #F3F3F3;
+        color: #AEACAA;
+        padding: 0 16px;
+        margin-top: 32px;
+        background-repeat: no-repeat;
+        background-position: 30px center;
+        background-size: 30px 30px;
+
+        @include _xl{
+            width: 230px;                  
+        }
+        @include _s{
+            width: 210px;                  
+        }
+    }
+
+    &__form_btn{
+        width: 104px;
+        height: 48px;
+        background-color: #74B900;
+        color: $white;
+        border: none;
+    }
+    &__media-container{
+        @include flex-row;
+        margin-bottom: 24px;
+    }
+    &__media-link{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 24px;
+        border-radius: 50%;
+    }
+
+    &__media-link_svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    &__media-link:hover{
+        box-shadow: 1px 2px 21px 2px #f7f7f7b8;
+    }
+
+    &__conf-txt, &__media-txt{
+        @include footter-txt;
+    }
+}
