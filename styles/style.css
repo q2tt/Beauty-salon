@@ -478,14 +478,16 @@ body {
 
 @media (min-width: 480px) and (max-width: 767px) {
   .header {
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     padding: 55px 0;
   }
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .header {
-    height: 460px;
+    min-height: 460px;
+    height: auto;
     padding: 45px 0;
   }
 }
@@ -1476,6 +1478,12 @@ body.mouse .nav__link:hover {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
@@ -1603,14 +1611,14 @@ body.mouse .nav__link:hover {
   font-size: 28px;
   line-height: 130%;
   width: 240px;
-  padding: 168px 0 0 48px;
+  margin: 0 0 48px 48px;
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .body__text_box2 {
     width: 178px;
     font-size: 16px;
-    padding: 72px 0 0 24px;
+    margin: 0 0 24px 24px;
   }
 }
 
@@ -2334,21 +2342,36 @@ body.mouse .nav__link:hover {
   }
 }
 
+.slider__img-box {
+  width: 648px;
+  height: 424px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .slider__img-box {
+    width: 470px;
+    height: 314px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .slider__img-box {
-    width: 648px;
+    width: 700px;
+    height: 424px;
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .slider__img-box {
-    width: 400px;
+    width: 450px;
+    height: 297px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .slider__img-box {
-    width: 250px;
+    width: 300px;
+    height: 198px;
   }
 }
 
@@ -2367,20 +2390,21 @@ body.mouse .nav__link:hover {
 @media (min-width: 768px) and (max-width: 991px) {
   .slider__img {
     width: 700px;
+    height: 424px;
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .slider__img {
     width: 450px;
-    height: auto;
+    height: 297px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .slider__img {
     width: 300px;
-    height: auto;
+    height: 198px;
   }
 }
 

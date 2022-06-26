@@ -129,6 +129,8 @@
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 16px;
+        display: flex;
+        align-items: flex-end;
 
         @include _xxl {
             width: 549px;
@@ -223,12 +225,12 @@
     &__text_box2 {
         @include text28;
         width: 240px;
-        padding: 168px 0 0 48px;
+        margin: 0 0 48px 48px;
 
         @include _s {
             width: 178px;
             font-size: 16px;
-            padding: 72px 0 0 24px;
+            margin: 0 0 24px 24px;
         }
     }
 

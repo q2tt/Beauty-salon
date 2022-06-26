@@ -16,12 +16,14 @@
   }
 
   @include _m{
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     padding: 55px 0;
     }
 
     @include _s{
-        height: 460px;
+        min-height: 460px;
+        height: auto;
         padding: 45px 0;
     }
 
